@@ -1,0 +1,605 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+section {
+    
+    padding: 150px 0;
+}
+
+.navbar {
+    background-color: #1f0951;
+    padding: 1.5rem 1rem;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #dec3ff;
+}
+
+
+.section-divider {
+    border-top: 1px solid #eee;
+    margin:  20px 0;
+}
+
+.btn-custom {
+    background-color: #4b10c9;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background-color: #3a0ea0;
+}
+
+h2 {
+    font-size: 50px;
+    color: #4b10c9;
+    margin-bottom: 50px;
+    
+}
+
+.skills-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #4b10c9;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+
+#scrollUpBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+/* Iconos de habilidades */
+ul li i {
+    margin-right: 10px;
+    color: #4b10c9;
+    font-size: 24px;
+}
+
+/* Botón "Scroll Up" */
+#scrollUpBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #4b10c9;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scrollUpBtn:hover {
+    background-color: #3a0ea0;
+}
+
+/* Animación suave para aparecer/desaparecer el botón de "Scroll Up" */
+#scrollUpBtn.show {
+    display: flex;
+    animation: fadeIn 0.5s;
+}
+
+
+/* General */
+.btn-primary, .btn-custom {
+    background-color: #4b10c9; /* Color violeta */
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-custom:hover {
+    background-color: #3a0ea0; /* Violeta más oscuro al pasar el cursor */
+    color: #fff;
+}
+
+/* Separación de los botones del menú */
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Espacio entre botones del menú */
+}
+
+/* Ajustes para vista responsiva (en colapso) */
+.navbar-nav {
+    text-align: center; /* Alinear al centro los elementos del menú en vista colapsada */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px; /* Espacio extra entre botones en vista colapsada */
+}
+
+
+/* Estilo para la lista de habilidades */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.skills-list li {
+    margin-bottom: 20px; /* Reducir espaciado entre cada habilidad */
+    padding: 5px; /* Reducir espaciado interno */
+    background-color: #f5f5f5; /* Fondo suave para cada habilidad */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-3px); /* Efecto de elevación más sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.skills-list li i {
+    color: #6a1b9a; /* Color violeta para los iconos */
+    font-size: 20px; /* Tamaño de iconos más pequeño */
+    margin-right: 10px; /* Espaciado entre icono y texto */
+    vertical-align: middle;
+}
+
+.skills-list p {
+    margin: 5px 0 0 35px; /* Reducir el margen superior e izquierdo */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    color: #333; /* Color del texto */
+}
+
+.skill-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #8e24aa; /* Línea divisoria violeta */
+    margin: 10px 0; /* Espacio extra para la línea */
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    font-size: 2.8rem; /* Tamaño de fuente del título más pequeño */
+    color: #1f0951; /* Color del título */
+    margin-bottom: 20px; /* Espacio extra debajo del título */
+}
+
+/* Divisores entre secciones */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #31206a; /* Color de la línea divisoria */
+    margin: 20px 0; /* Espacio entre secciones */
+}
+
+
+.projects-section {
+    padding: 100px 0; /* Aumentar el padding superior e inferior */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Tamaño del título */
+    color: #4b10c9; /* Color violeta */
+    text-align: center; /* Centrar el título */
+    margin-bottom: 40px; /* Espacio debajo del título */
+}
+
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    border: none; /* Sin bordes en la tarjeta */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Elevar la tarjeta al pasar el cursor */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el cursor */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Tamaño del título de la tarjeta */
+    color: #1f0951; /* Color del título de la tarjeta */
+}
+
+.card-text {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #666; /* Color del texto */
+}
+
+.btn-custom {
+    background-color: #4b10c9; /* Color violeta */
+    color: white; /* Color del texto */
+    border-radius: 50px; /* Esquinas redondeadas */
+    transition: background-color 0.3s; /* Transición para el color de fondo */
+}
+
+.btn-custom:hover {
+    background-color: #3a0ea0; /* Color más oscuro al pasar el cursor */
+}
+
+
+/* Sección Hero */
+.hero {
+    background: radial-gradient(ellipse at center,#251056, #603fe2);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación de la imagen del Hero */
+.animated-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #6b42e6;
+    margin-bottom: 20px;
+    transform: scale(0);
+    animation: zoomIn 1.5s ease forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animación de entrada del texto */
+.animated-text, .animated-subtext {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1.5s ease forwards;
+}
+
+.animated-text {
+    animation-delay: 0.5s;
+    font-size: 2.5rem;
+}
+
+.animated-subtext {
+    animation-delay: 1s;
+    font-size: 1.2rem;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Efecto de fondo dinámico */
+.hero {
+    background:  radial-gradient(ellipse at center,#251056, #603fe2);
+    animation: backgroundChange 25s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background:  radial-gradient(ellipse at center,#251056, #603fe2);  
+    }
+    100% {
+        background:  radial-gradient(ellipse at center, #603fe2,#251056);;
+    }
+}
+
+
+
+/* Navbar con fondo dinámico */
+.animated-navbar {
+    background: linear-gradient(90deg, #251056,#4b10c9);
+    transition: background-color 0.5s ease;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Transición suave para los botones */
+.nav-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Hover en los botones para dar dinamismo */
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de iluminación en los botones */
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.nav-btn:hover::after {
+    opacity: 1;
+}
+
+
+/* Estilo del nombre de la marca con animación */
+.animated-brand {
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.animated-brand:hover {
+    color: #dec3ff;
+}
+
+
+
+
+
+/* Estilos generales para la sección "Acerca de mí" */
+.about-section {
+    padding: 100px 0;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #4b10c9;
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeInLeft 1s ease;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInRight 1s ease;
+}
+
+
+
+
+
+/* Transiciones suaves para el contenido */
+.about-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Animaciones Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos generales para la sección de contacto */
+.contact-section {
+    padding: 100px 0;
+    background-color: #fafafa;
+    animation: fadeIn 1.5s ease;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #4b10c9;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    animation: fadeInDown 1s ease;
+}
+
+/* Efecto de entrada y borde para los campos de entrada */
+.form-control {
+    border: 2px solid #ddd;
+    padding: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4b10c9;
+    box-shadow: 0 0 8px rgba(75, 16, 201, 0.2);
+    outline: none;
+}
+
+/* Estilos para el botón de envío */
+.btn-primary {
+    background-color: #4b10c9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-primary:hover {
+    background-color: #3a0ea0;
+    transform: scale(1.05);
+}
+
+.btn-primary:active {
+    background-color: #4b10c9;
+    transform: scale(1);
+}
+
+
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección de contacto */
+.contact-section {
+    background-color: #7357ff; /* Fondo suave violeta */
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #4b10c9;
+    margin-bottom: 40px;
+  }
+  
+  .contact-form {
+    background-color: #9180ff; /* Fondo del formulario */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-control {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #4b10c9; /* Texto violeta */
+    font-size: 1.1rem;
+  }
+  
+  .btn-primary {
+    background-color: #8478f1;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Sombra del botón */
+  }
+  
+  .btn-primary:hover {
+    background-color: #7a58d1;
+  }
+  
+  .contact-section .text-center {
+    text-align: center;
+  }
+  
+
+  
